@@ -8,13 +8,17 @@
     <title>LeetCode Leaderboard</title>
 </head>
 <body class="bg-gray-900 text-white p-5">
+    
     <div class="container mx-auto my-10">
         <div class="">
             <!-- Leaderboard -->
             <div class="col-span-2 bg-gray-800 rounded-lg shadow-md p-6 overflow-x-auto">
                 <div class="flex justify-between items-center mb-6">
                     <h1 class="text-4xl font-bold">TBPPP Leaderboard</h1>
+                    
+                   
                     <div class="flex gap-4 items-center">
+                       
                         <select id="section-filter" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <option value="all">All Sections</option>
                             <!-- Options will be dynamically added -->
@@ -22,6 +26,15 @@
                         <button id="export-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex items-center transition duration-150 ease-in-out">
                             <i class="fas fa-download mr-2"></i> Export to CSV
                         </button>
+                         <!-- adding search button and placeholder -->
+                         <input id="searching" type="name"  placeholder="Name.." style="background-color: black;color: white;">
+                         <button  id="searchingbtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded flex items-center transition duration-150 ease-in-out">
+                         SEARCH
+                         </button>
+                        
+                       
+                         
+                        
                     </div>
                 </div>
                 <table class="min-w-full bg-gray-900 rounded-lg overflow-hidden shadow-md">
@@ -84,6 +97,8 @@
             </div>
         </div>
     </div>
+   
     <script src="index.js"></script>
+   
 </body>
 </html>

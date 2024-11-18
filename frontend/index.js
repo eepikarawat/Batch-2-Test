@@ -5,6 +5,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         let filteredData = [...data]; // Keep original data separate
         const leaderboardBody = document.getElementById('leaderboard-body');
         const sectionFilter = document.getElementById('section-filter');
+// function for searching
+        const searching=document.getElementById("searching");
+        const searchingbtn=document.getElementById("searchingbtn");
+        const search=() =>{
+            const val=searching.value;
+            filteredData=data.filter(x=>x.name.includes(val.toUpperCase()));
+            renderLeaderboard(filteredData);
+        }
+        searchingbtn.addEventListener('click',()=>{search()});
+        
 
         // Populate section filter dropdown
         const populateSectionFilter = () => {
